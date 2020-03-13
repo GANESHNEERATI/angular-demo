@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  //name = 'Angular';
+
+  // Courses=[
+
+  //   {id:1,name:'java'},
+  //   {id:1,name:'c'},
+  //   {id:1,name:'c++'},
+  // ];
 }
