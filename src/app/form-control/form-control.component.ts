@@ -14,6 +14,11 @@ export class FormControlComponent  {
 
     console.log(x);
   }
+  submit(f)
+  {
+
+    console.log(f);
+  }
 
   
 }
