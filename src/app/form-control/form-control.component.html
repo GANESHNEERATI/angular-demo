@@ -42,12 +42,19 @@ required
 </div>
 <div class="form-group">
   <label for="contactMethod">contactMethod</label>
-  <select ngModel name="contactMethod" id="contactMethod" class="form-control">
+  <select multiple ngModel name="contactMethod" id="contactMethod" class="form-control">
     <option value=""></option>
    <option  *ngFor="let con of cM" [value]="con.id">{{con.name}}</option>
    
     </select>
     </div>
+
+    <div  *ngFor="let con of cM" class="radio">
+	<label>
+    <input ngModel type="radio" name="contactMethod" [value]="cM.id">
+    {{cM.name}}
+    </label>
+</div>
 <p>{{f.value | json}}</p>
 
 <button class="btn btn-primary" [disabled]="!f.valid">submit</button>
