@@ -1,0 +1,7 @@
+
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+
+.form-control.ng-pristine.ng-invalid.ng-touched
+{
+  border: 2px solid red;
+}
