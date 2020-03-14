@@ -1,4 +1,6 @@
 <form  #f="ngForm" (ngSubmit)="submit(f)">
+  <div ngModelGroup="contact" #Contact="ngModelGroup">
+    <div  *ngIf="!Contact.valid"></div>
     <div class="form-group">
 <label for="firstName">First Name</label>
 <input 
@@ -23,17 +25,17 @@ required
 <div *ngIf="firstName.errors.pattern">
   First Name doesn't match pattern
   </div>
-
-
-
-
 </div>
 </div>
+  </div>
 
-<div class="form-group">
+<div ngModelGroup="comment"> 
+  <div class="form-group">
     <label for="comment">Comment</label>
     <textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
 </div>
-<button class="btn btn-primary">submit</button>
+  </div> 
+
+<button class="btn btn-primary" [disabled]="!f.valid">submit</button>
 
 </form>
