@@ -20,5 +20,14 @@ export class FormControlComponent  {
     console.log(f);
   }
 
+  cM=[
+ {id:1,name:'Email'},
+ {id:2,name:'Phone'}
+
+
+
+
+  ];
+
   
 }

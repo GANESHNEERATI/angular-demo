@@ -35,6 +35,20 @@ required
     <textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
 </div>
   </div> 
+  <div class="checkbox">
+	<label>
+    Maling List<input type="checkbox" ngModel name="isSubscribed">
+    </label>
+</div>
+<div class="form-group">
+  <label for="contactMethod">contactMethod</label>
+  <select ngModel name="contactMethod" id="contactMethod" class="form-control">
+    <option value=""></option>
+   <option  *ngFor="let con of cM" [value]="con.id">{{con.name}}</option>
+   
+    </select>
+    </div>
+<p>{{f.value | json}}</p>
 
 <button class="btn btn-primary" [disabled]="!f.valid">submit</button>
 
